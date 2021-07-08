@@ -1,5 +1,7 @@
+use rand::Rng;
+
 fn main() {
-    let ceiling: u32 = 400000;
+    let ceiling: u32 = rand::thread_rng().gen_range(4000..400000);
     println!("print fib numbers below {}", ceiling);
     fib(ceiling);
 }
